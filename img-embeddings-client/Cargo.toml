@@ -1,0 +1,15 @@
+[package]
+name = "img-embeddings-client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hs-grpc-shared = { path = "../hs-grpc-shared" }
+prost = { workspace = true }
+
+tokio = { workspace = true }
+tonic = { workspace = true }
+candle-core = { workspace = true }
+
+[build-dependencies]
+tonic-build = { workspace = true }

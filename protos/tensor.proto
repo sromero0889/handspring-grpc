@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tensor_proto;
+
+enum Dtype {
+  F32 = 0;
+}
+
+enum ByteOrder {
+  LE = 0; // little-endian
+  BE = 1; // big-endian
+}
+
+
+message TensorProto {
+  repeated bytes content = 1;
+  repeated uint32 shape = 2;
+  Dtype dtype = 3;
+  ByteOrder byte_order = 4;
+}

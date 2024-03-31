@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package embeddings_proto;
+
+import "tensor.proto";
+
+service Embeddings {
+  //  todo, limited by size, implement equivalent for stream
+  rpc GetEmbeddings (tensor_proto.TensorProto) returns (tensor_proto.TensorProto);
+}

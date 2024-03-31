@@ -1,8 +1,20 @@
+[workspace]
+members = ["hs-grpc-shared", "img-clip-vit-b-32-service", "img-embeddings-client"]
+
+
 [package]
 name = "handspring-grpc"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+
+
+
+[workspace.dependencies]
+log = "0.4.20"
+candle-core = { git = "https://github.com/huggingface/candle.git", version = "0.4.0"}
+tonic-build = "0.10"
+tokio = { version = "1.35", features = ["macros", "rt-multi-thread"]}
+tonic = "0.10"
+prost = "0.12"

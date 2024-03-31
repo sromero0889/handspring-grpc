@@ -1,0 +1,17 @@
+[package]
+name = "img-clip-vit-b-32-service"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+hs-mm-embeddings = { git = "https://github.com/sromero0889/handspring.git", version = "0.1.0", features = ["clip_vit_b_32_image"]}
+candle-core = { workspace = true }
+hs-grpc-shared = { path = "../hs-grpc-shared" }
+prost = { workspace = true }
+
+tokio = { workspace = true }
+tonic = { workspace = true }
+
+[build-dependencies]
+tonic-build = { workspace = true }
